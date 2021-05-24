@@ -1,5 +1,0 @@
-14:38:23: DMClient started, nSolvers=1, solverID=0
-14:38:23: ID 0, sending pdu 1001 
-14:38:24: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
-14:38:24: Client select returned 1
-14:38:24: Manager sent start PDU, continuing

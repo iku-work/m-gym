@@ -1,5 +1,0 @@
-14:37:16: Model WheelLoader3 loaded, using config and resources from C:/Program Files (x86)/Mevea/
-14:37:20: NOTE: File "" is not present. Continuing...
-14:37:20: Setting camera to body 0: Ground
-14:37:20: Head Tracking inactive
-14:37:21: Total loading time 5.061488

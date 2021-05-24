@@ -1,7 +1,0 @@
-14:35:56: DMClient started, nSolvers=0, solverID=1002
-14:35:56: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
-14:35:56: ID 1002, sending pdu 1002 
-14:35:56: filename: c:\data\m-gym_v0\m_gym\envs\Workers\2ea859c6-bc84-11eb-9b32-b8ee6558a3b2\WheelLoader.mvs, length 88
-14:36:00: Simulation started...
-14:36:16: DMClient destr, nSolvers=0, solverID=1002
-14:36:16: DMClient in destructor

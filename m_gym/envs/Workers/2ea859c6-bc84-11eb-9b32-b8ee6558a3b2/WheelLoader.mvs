@@ -1,6 +1,0 @@
-<MeVEASimulation>
-  <Environment collisionGroupDefinitionsFile="" nCollisionThreads="4" particleCellsInThread="Yes" particlesInThread="Yes" simulationName="Tutorial 32ea859c6-bc84-11eb-9b32-b8ee6558a3b2" useParticles="Yes" />
-  <Models MPKFile="" ModelFile="WheelLoader.xml" hydraulicsSchematicFile="" solverID="1" useArchive="No" />
-  <World WorldFile="WheelLoader_world.xml" />
-  <ModelCreationInfo modelVersion="" modellerVersion="1161" saveDate="2021-05-05" saveTime="12:52:15" softwareVersion="2.4.5" solverVersion="7.70.3601" />
-</MeVEASimulation>

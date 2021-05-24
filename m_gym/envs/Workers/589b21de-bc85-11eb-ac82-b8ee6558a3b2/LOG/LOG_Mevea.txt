@@ -1,7 +1,0 @@
-14:44:13: Model WheelLoader10 loaded, using config and resources from C:/Program Files (x86)/Mevea/
-14:44:16: NOTE: File "" is not present. Continuing...
-14:44:16: Setting camera to body 0: Ground
-14:44:16: Head Tracking inactive
-14:44:17: Total loading time 4.591224
-14:44:20: Warning: in 3ds loader: file has no nodes, traversing by meshes instead
-14:44:21: Warning: in 3ds loader: file has no nodes, traversing by meshes instead
