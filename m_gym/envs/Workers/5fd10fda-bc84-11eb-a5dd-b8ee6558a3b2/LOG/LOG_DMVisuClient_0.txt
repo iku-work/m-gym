@@ -1,0 +1,5 @@
+14:37:18: DMClient started, nSolvers=0, solverID=1002
+14:37:18: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
+14:37:18: ID 1002, sending pdu 1002 
+14:37:18: filename: c:\data\m-gym_v0\m_gym\envs\Workers\5fd10fda-bc84-11eb-a5dd-b8ee6558a3b2\WheelLoader.mvs, length 88
+14:37:21: Simulation started...

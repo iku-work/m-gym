@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MeVEASimulation>
+  <Environment simulationName="Tutorial 3" useParticles="Yes" particlesInThread="Yes" particleCellsInThread="Yes" collisionGroupDefinitionsFile="" nCollisionThreads="4" />
+  <Models ModelFile="WheelLoader.xml" solverID="1" useArchive="No" MPKFile="" hydraulicsSchematicFile="" />
+  <World WorldFile="WheelLoader_world.xml" />
+  <ModelCreationInfo saveDate="2021-05-05" saveTime="12:52:15" modelVersion="" softwareVersion="2.4.5" modellerVersion="1161" solverVersion="7.70.3601" />
+</MeVEASimulation>

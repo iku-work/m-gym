@@ -1,0 +1,5 @@
+19:36:33: DMClient started, nSolvers=0, solverID=1002
+19:36:33: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
+19:36:33: ID 1002, sending pdu 1002 
+19:36:33: filename: C:/Program Files (x86)/Mevea/MeveaModeller/tmp/sample.mvs, length 57
+19:36:34: Simulation started...

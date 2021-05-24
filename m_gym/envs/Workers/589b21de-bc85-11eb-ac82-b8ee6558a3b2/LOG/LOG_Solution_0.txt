@@ -1,0 +1,49 @@
+Log started
+Starting Init
+Init Collisions
+Init TyreCollisions
+End Collision Init
+Setting Client Parameters
+Calling Case Specific Init
+Calling CreateObjects
+Initializing particles
+Creating collisions objects
+Creating global wind emitter
+Creating virtual sensors
+Simulation objects created
+Creating PrintRequests
+Creating data collector
+Initializing ScriptEngine
+Calling InitializeObjects
+Solver initialization complete
+Waiting for start command
+Start command received
+Starting particles in threaded mode
+
+
+ SOLUTION STARTED
+Analysis length 30000.000000 seconds
+
+Round=500, Average time=  0.000564 Last   0.000437 s Biggest 0.002144
+Round=1000, Average time=  0.000600 Last   0.000384 s Biggest 0.019228
+Round=1500, Average time=  0.000521 Last   0.000448 s Biggest 0.001660
+Round=2000, Average time=  0.000528 Last   0.000394 s Biggest 0.001752
+Round=2500, Average time=  0.000520 Last   0.000428 s Biggest 0.001396
+Round=3000, Average time=  0.000544 Last   0.000980 s Biggest 0.001592
+Round=3500, Average time=  0.000551 Last   0.000481 s Biggest 0.001626
+Round=4000, Average time=  0.000548 Last   0.000419 s Biggest 0.001808
+Round=4500, Average time=  0.000548 Last   0.000455 s Biggest 0.001738
+Round=5000, Average time=  0.000563 Last   0.000442 s Biggest 0.001557
+Round=5500, Average time=  0.000554 Last   0.000400 s Biggest 0.001842
+Round=6000, Average time=  0.000565 Last   0.000663 s Biggest 0.002317
+Round=6500, Average time=  0.000542 Last   0.000411 s Biggest 0.001670
+Round=7000, Average time=  0.000543 Last   0.000484 s Biggest 0.001557
+Round=7500, Average time=  0.000547 Last   0.000929 s Biggest 0.001627
+Round=8000, Average time=  0.000547 Last   0.000420 s Biggest 0.002085
+Round=8500, Average time=  0.000620 Last   0.003062 s Biggest 0.015510
+Round=9000, Average time=  0.000763 Last   0.000699 s Biggest 0.004568
+Round=9500, Average time=  0.000778 Last   0.000487 s Biggest 0.013765
+Round=10000, Average time=  0.000667 Last   0.000434 s Biggest 0.002363
+Round=10500, Average time=  0.000564 Last   0.000788 s Biggest 0.001609
+Round=11000, Average time=  0.000552 Last   0.000421 s Biggest 0.001594
+Round=11500, Average time=  0.000626 Last   0.000495 s Biggest 0.001911

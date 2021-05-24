@@ -1,0 +1,3 @@
+recursive-include mevea_io *.h *.py *.pyx *.pyd *.pxi *.xml *.c
+include mujoco_py/gl/*.c
+include setup.py

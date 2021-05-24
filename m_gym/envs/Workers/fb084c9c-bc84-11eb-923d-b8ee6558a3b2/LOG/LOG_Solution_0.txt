@@ -1,0 +1,30 @@
+Log started
+Starting Init
+Init Collisions
+Init TyreCollisions
+End Collision Init
+Setting Client Parameters
+Calling Case Specific Init
+Calling CreateObjects
+Initializing particles
+Creating collisions objects
+Creating global wind emitter
+Creating virtual sensors
+Simulation objects created
+Creating PrintRequests
+Creating data collector
+Initializing ScriptEngine
+Calling InitializeObjects
+Solver initialization complete
+Waiting for start command
+Start command received
+Starting particles in threaded mode
+
+
+ SOLUTION STARTED
+Analysis length 30000.000000 seconds
+
+Round=500, Average time=  0.000535 Last   0.000325 s Biggest 0.002815
+Round=1000, Average time=  0.000481 Last   0.000349 s Biggest 0.001541
+Round=1500, Average time=  0.000472 Last   0.000871 s Biggest 0.001523
+Round=2000, Average time=  0.000469 Last   0.000394 s Biggest 0.001130
