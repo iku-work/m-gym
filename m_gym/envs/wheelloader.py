@@ -7,9 +7,6 @@ from m_gym.envs.createsim import CreateSimulation
 from m_gym.envs.meveahandle import MeveaHandle
 from time import sleep
 from math import exp
-#from stable_baselines.common.env_checker import check_env
-import m_gym
-from os import getcwd, path
 
 class WheelLoaderEnv(gym.Env):
 
@@ -35,8 +32,6 @@ class WheelLoaderEnv(gym.Env):
     # Get amount of the parameters in the observation vector
     self.obs_len = self.sim.observation_len
     
-
-
     # Get amount of the parameters in the action vector
     self.act_len = self.sim.action_len
 
@@ -77,21 +72,17 @@ class WheelLoaderEnv(gym.Env):
   
   def reset(self):
     
-
-    print('RESET')
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 1)
     sleep(2)
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 0)
 
     return 0 #self.mh.get_outputs()  # reward, done, info can't be included
 
-
   def render(self, mode='', close=False):
-
     pass
   
   def close(self):
-
+    
     self.mh.terminate()
     self.mh.delete_folder(self.new_folder)
     print('Simulation environment closed!')
