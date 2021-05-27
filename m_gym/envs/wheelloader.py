@@ -8,6 +8,7 @@ from m_gym.envs.meveahandle import MeveaHandle
 from time import sleep
 from math import exp
 
+
 class WheelLoaderEnv(gym.Env):
 
   def __init__(self):
@@ -76,7 +77,7 @@ class WheelLoaderEnv(gym.Env):
     sleep(2)
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 0)
 
-    return 0 #self.mh.get_outputs()  # reward, done, info can't be included
+    return self.mh.get_outputs()
 
   def render(self, mode='', close=False):
     pass

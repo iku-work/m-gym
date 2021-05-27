@@ -9,7 +9,7 @@ sim = gym.make('m_gym:wheelloader-v0')
 env = DummyVecEnv([lambda: sim])
 
 model = PPO2(MlpPolicy, env, verbose=1)
-model.learn(total_timesteps=200000)
+model.learn(total_timesteps=200)
 
 # Wait till Mevea Solver opens
 sleep(10)
@@ -17,7 +17,7 @@ sleep(10)
 # Reset an environment
 obs = env.reset()
 
-for i in range(20000):
+for i in range(200):
   
   # Skip frame
   sleep(1)

@@ -35,7 +35,9 @@ class MeveaHandle:
         analog =  [io.get_analog_output(int(analog_output_number),self.worker_number) for analog_output_number in self.analog_outputs]
         digital = [io.get_digital_output(int(digital_output_number),self.worker_number) for digital_output_number in self.digital_outputs]
 
-        return np.array(analog + digital, dtype=np.float32)
+        joined_outputs_list = analog + digital
+
+        return np.array(joined_outputs_list, dtype=np.float32)
     
     def set_single_digital_input(self,  block, channel, value):
         io.set_digital_input(block, channel, value)

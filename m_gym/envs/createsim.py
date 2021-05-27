@@ -5,7 +5,7 @@ from errno import ENOTDIR
 from pathlib import Path
 from uuid import uuid1
 import m_gym
-import os
+import random
 
 class CreateSimulation():
 
@@ -17,15 +17,10 @@ class CreateSimulation():
     self.excluded = config['excluded']
     self.service_inputs = config['service_inputs']
     self.render = config['render']
-    self.solver_number = 0
 
     # Get useful data from the config.json file
     #self.current_dir = path.dirname(path.abspath(__file__))
     self.current_dir =path.dirname(path.abspath(m_gym.envs.createsim.__file__))
-    print('Path:___', self.current_dir)
-    
-    print('Environment path: ', path.dirname(path.abspath(m_gym.envs.createsim.__file__)))
-    print('Environment path: ', os.path.abspath(m_gym.envs.createsim.__file__))
 
     # Find simulation model folder
     self.model_folder = self.current_dir + '\\' + self.model_file_location
@@ -37,7 +32,11 @@ class CreateSimulation():
     self.model_file_path = self.model_folder + '\\{}.mvs'.format(self.model_name)
 
     # Open file
-    self.xmldoc = ET.parse(self.xml_file_path)
+    try:
+      self.xmldoc = ET.parse(self.xml_file_path)
+    except Exception as e:
+      raise IOError(e)
+      #print('Error opening xml file!')
 
     self.inputs, self.outputs = self.read_xml()
     self.action_len = self.calc_len(self.inputs)
@@ -61,7 +60,7 @@ class CreateSimulation():
             print('Directory not copied. Error: %s' % e)
 
 
-    self.worker_number = self.calculate_directories(self.workers_dir)
+    self.worker_number = random.randint(0,15)
     self.new_xml_file_path = self.new_folder + '\\{}.xml'.format(self.model_name)
     self.new_xml_file = ET.parse(self.new_xml_file_path)
     self.analog_inputs_blocks, self.digital_inputs_blocks = self.set_inputs(self.new_xml_file_path, self.new_xml_file, self.inputs, self.worker_number)
@@ -70,9 +69,6 @@ class CreateSimulation():
     self.model_file_path = self.new_folder + '\\{}.mvs'.format(self.model_name)
     self.change_sim_name(self.model_file_path, self.current_id)
 
-  def calculate_directories(self, workers_dir):
-    
-    return len(listdir(self.workers_dir))
 
   # Function for removing spaces and change to lowercase of the instances
   def normalize_value(self, value):
