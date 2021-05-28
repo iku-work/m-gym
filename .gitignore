@@ -128,4 +128,4 @@ dmypy.json
 .pyre/
 
 m_gym/envs/Workers
-.vscode/
+.vscode/*
