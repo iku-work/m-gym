@@ -14,11 +14,11 @@ ray.init()
 
 config = ppo.DEFAULT_CONFIG.copy()
 config["num_gpus"] = 0
-config["num_workers"] = 3
+config["num_workers"] = 2
 config["num_envs_per_worker"] = 1
 
 trainer = ppo.PPOTrainer(config=config, env="loader")
 
 while True:
-    print(trainer.train())
+    trainer.train()
 
