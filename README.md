@@ -18,4 +18,9 @@ Download and install:
 git clone https://github.com/iku-work/m-gym.git
 pip install -e m-gym
 ```
+## Running tutorial model
 
+Navigate to the ```tutorial_baselines.py``` file location in console and run following console command: 
+```console
+python3 tutorial_baselines.py
+```
