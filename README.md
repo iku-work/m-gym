@@ -8,7 +8,7 @@ Other requirements:
 - Windows 10
 - For installation of the M-Gym you require Python 3.7. If you want to use different version, build ```MeveaIO.pyd``` file by using this repo:  https://github.com/iku-work/MeveaIO.git and replace it at 
 m-gym/m_gym/envs/. 
-- For running tutorials install OpenAI Baselines: https://github.com/openai/baselines or RAY: https://docs.ray.io/en/master/index.html 
+- For running tutorials install OpenAI Baselines: https://github.com/openai/baselines or RAY: https://docs.ray.io/en/stable/rllib.html
 
 ## Installation
 
