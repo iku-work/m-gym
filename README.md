@@ -1,6 +1,6 @@
 # M-Gym
 
-M-Gym is a module for using Mevea physics-based engine in reinforcement learning training. It allows to use custom simulation model of heavy machinery in Python 3. 
+M-Gym is a module for using Mevea physics-based engine in reinforcement learning training. It allows using a custom simulation model of heavy machinery in Python 3. 
 
 ## Requirements
 Other requirements:
