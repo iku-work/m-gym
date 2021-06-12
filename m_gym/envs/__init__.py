@@ -1,1 +1,2 @@
 from m_gym.envs.wheelloader import WheelLoaderEnv
+from m_gym.envs.wheelloader_sparse import WheelLoaderSparseEnv

@@ -9,10 +9,10 @@ from time import sleep
 from math import exp
 
 
-class WheelLoaderEnv(gym.Env):
+class WheelLoaderSparseEnv(gym.Env):
 
   def __init__(self):
-    super(WheelLoaderEnv, self).__init__()
+    super(WheelLoaderSparseEnv, self).__init__()
 
     self.config= {
     "model_name": "WheelLoader",
@@ -48,8 +48,9 @@ class WheelLoaderEnv(gym.Env):
     self.mh = MeveaHandle(self.sim.worker_number, self.sim.analog_inputs_blocks , self.sim.digital_inputs_blocks, self.sim.analog_outputs_blocks, self.sim.digital_outputs_blocks)
     self.mh.start_process(os.path.abspath(self.model_file_path), self.config['render'])
     
-
+    self.bucket_loaded = False
     self.bucket_trigger_mass = 100
+    self.dumpster_loaded = False
     self.dumpster_trigger_mass = 100
 
     del self.sim
@@ -65,11 +66,23 @@ class WheelLoaderEnv(gym.Env):
   def step(self, action):
 
     self.mh.set_inputs(action)
-    sleep(1)
-    obs = self.mh.get_outputs()
-    reward = ((exp(-obs[0]) * obs[2]) +  (exp(-obs[1]) * obs[2]) + (obs[4] - obs[3]))/(obs[5] + obs[6] + obs[7] + 1)
-    done = False
 
+    obs = self.mh.get_outputs()
+    #reward = ((exp(-obs[0]) * obs[2]) +  (exp(-obs[1]) * obs[2]) + (obs[4] - obs[3]))/(obs[5] + obs[6] + obs[7] + 1)
+
+    # If mass in the bucket is higher than trigger mass    
+    if obs[4] > self.bucket_trigger_mass:
+      reward = obs[4]
+    else:
+      reward = 0
+
+    if obs[7] > self.bucket_trigger_mass:
+      reward = obs[4]
+    else:
+      reward = 0
+    
+    done = False
+    
     '''
      Termination states:
      - Time > episode duration
@@ -91,6 +104,9 @@ class WheelLoaderEnv(gym.Env):
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 1)
     sleep(2)
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 0)
+
+    self.bucket_loaded = False
+    self.dumpster_loaded = False
 
     return self.mh.get_outputs()
 

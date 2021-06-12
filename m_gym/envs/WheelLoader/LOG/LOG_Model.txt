@@ -979,7 +979,7 @@ Input_Forward, Digital, GearBox, GearBox, 2, 4, 0, , No, 0, 0, 0, 0, 0, , 0
 Input_Reverse, Digital, GearBox, GearBox, 3, 5, 0, , No, 0, 0, 0, 0, 0, , 0
 Motor_Input, Analog, Motor, Volvo_D6E_LBE3, 0, 5, 0, , No, -80, 150, 0, 0, 0, , 0
 Clutch_input, Analog, Clutch, Clutch, 0, 2, 0, , No, 1000, -1000, 0.25, 0, 0, , 0
-Input_Reset, Digital, Spot, Spot1, 1, 0, 0, , No, 1, 0, 0.25, 0, 0, , 0
+Input_Reset, Digital, Spot, Spot1, 1, 6, 0, , No, 1, 0, 0.25, 0, 0, , 0
 Input_Ready, Digital, Input, Input_Ready, 2, 1, 0, , No, 1, 0, 0.25, 0, 0, , 0
 
 ===============================================================================
