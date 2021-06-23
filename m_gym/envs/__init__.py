@@ -1,2 +1,3 @@
 from m_gym.envs.wheelloader import WheelLoaderEnv
 from m_gym.envs.wheelloader_sparse import WheelLoaderSparseEnv
+from m_gym.envs.excavator_digging_sparse import ExcavatorDiggingSparseEnv

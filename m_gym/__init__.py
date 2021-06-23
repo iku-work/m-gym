@@ -9,3 +9,8 @@ register(
     id='wheelloader-sparse-v0',
     entry_point='m_gym.envs.wheelloader_sparse:WheelLoaderSparseEnv'
 )
+
+register(
+    id='excavator-digging-sparse-v0',
+    entry_point='m_gym.envs.excavator_digging_sparse:ExcavatorDiggingSparseEnv'
+)

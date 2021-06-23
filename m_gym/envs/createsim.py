@@ -18,6 +18,7 @@ class CreateSimulation():
     self.service_inputs = config['service_inputs']
     self.render = config['render']
 
+
     # Get useful data from the config.json file
     #self.current_dir = path.dirname(path.abspath(__file__))
     self.current_dir =path.dirname(path.abspath(m_gym.envs.createsim.__file__))
@@ -31,6 +32,8 @@ class CreateSimulation():
     # Find simulation model mvs file
     self.model_file_path = self.model_folder + '\\{}.mvs'.format(self.model_name)
 
+
+
     # Open file
     try:
       self.xmldoc = ET.parse(self.xml_file_path)
@@ -43,8 +46,18 @@ class CreateSimulation():
     self.observation_len = self.calc_len(self.outputs)
     
     self.current_id = uuid1()
-    self.workers_dir = '{}\\{}\\{}'.format(self.model_folder,'..','Workers') 
+    self.workers_dir = ""
+    if config.get("workers_directory"):
+      #print(config.get("workers_directory"))
+      self.workers_dir = '{}\\{}'.format(self.model_folder, self.config['workers_directory']) 
+      #print("works")
+    else:
+      self.workers_dir = '{}\\{}\\{}'.format(self.model_folder,'..','Workers') 
+
+
     self.new_folder = '{}\\{}'.format(self.workers_dir,self.current_id) 
+
+    print(self.new_folder)
 
     if not path.exists(self.workers_dir):
       makedirs(self.workers_dir)
@@ -62,8 +75,12 @@ class CreateSimulation():
 
     self.worker_number = random.randint(0,15)
     self.new_xml_file_path = self.new_folder + '\\{}.xml'.format(self.model_name)
+    print(self.new_xml_file_path)
     self.new_xml_file = ET.parse(self.new_xml_file_path)
     self.analog_inputs_blocks, self.digital_inputs_blocks = self.set_inputs(self.new_xml_file_path, self.new_xml_file, self.inputs, self.worker_number)
+
+    
+
     self.analog_outputs_blocks, self.digital_outputs_blocks = self.set_outputs(self.new_xml_file_path, self.new_xml_file, self.outputs, self.worker_number)
     self.set_name(self.new_xml_file_path, self.new_xml_file, self.worker_number)
     self.model_file_path = self.new_folder + '\\{}.mvs'.format(self.model_name)
@@ -133,7 +150,11 @@ class CreateSimulation():
   def set_inputs(self, xml_path, xml_doc, inputs_list, worker_number):
     
     root = xml_doc.getroot()
+    
     inputs_element = root.find('Inputs')
+    
+    print(inputs_element.text)
+
     analog_inputs_names = inputs_list[0]
     analog_inputs_len = len(analog_inputs_names)
     digital_inputs_names = inputs_list[2]
@@ -152,6 +173,8 @@ class CreateSimulation():
       digital_input = inputs_element.find(digital_inputs_names[digital_input_index])
       digital_input.set("JoyCh", str(worker_number))
 
+
+    print("Service inputs: ", service_inputs)
     for service_input_name in service_inputs:
       service_input = inputs_element.find(service_input_name)
       service_input.set("JoyCh", str(worker_number))
@@ -210,6 +233,8 @@ class CreateSimulation():
 
 class BadType(Exception):  
   pass
+
+
 
 
 
