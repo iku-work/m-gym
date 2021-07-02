@@ -6,26 +6,29 @@ import sys
 from m_gym.envs.createsim import CreateSimulation
 from m_gym.envs.meveahandle import MeveaHandle
 from time import sleep
-from math import exp, sqrt
+from math import exp
 
 
-class WheelLoaderEnv(gym.Env):
+class ExcavatorDiggingSparseEnv(gym.Env):
 
   def __init__(self):
-    super(WheelLoaderEnv, self).__init__()
+    super(ExcavatorDiggingSparseEnv, self).__init__()
 
     self.config= {
-    "model_name": "WheelLoader",
-    "model_file_location": "\\WheelLoader",
+    "model_name": "Excavator",
+    "model_file_location": "Excavator",
     "debug": False,
     "episode_duration": 45,
     "excluded": ["Input_Reset"],
-    "render": False, 
+    "render": True, 
     "service_inputs": ["Input_Reset","Input_Ready"],
     "service_outputs": ["Output_Reset_Done"],
-    "reset_input_block": 6,
-    "reset_done_output_block": 0
+    "reset_input_block": 12,
+    "reset_done_output_block": 1,
+
     }
+    #"workers_directory":"..\\Workers"
+
     self.sim = CreateSimulation(self.config)
     self.new_folder = self.sim.new_folder
     self.model_file_path = self.sim.model_file_path
@@ -64,45 +67,34 @@ class WheelLoaderEnv(gym.Env):
 
   def step(self, action):
 
-
     self.mh.set_inputs(action)
     sleep(1)
     obs = self.mh.get_outputs()
-    
-    # 12, 13, 14
-    #velocityBucket = sqrt(obs[12] ** 2 + obs[13] **2 + obs[14] ** 2)
-    #velocityDiscount = (1 - max(velocityBucket, 0.1)^1/(max(obs[2], 0.1)))
-    distanceComponent = exp(- obs[2])
-
-    reward = distanceComponent #* velocityDiscount 
-
-    #print("Reward: ", reward)
-
+    print(self.get_action_space())
+    reward = 1
     done = False
 
-    '''
-    Termination states:
-    - Time > episode duration
-    - Time > episode duration/3 and mass in the bucket < trigger mass
-    - Time > episode duration/2 and mass in the hopper < trigger mass
-    '''
+    print(obs[11], obs[11] >= self.config['episode_duration'])
 
-    if obs[10] >= self.config['episode_duration']:
-      done = True
-    elif obs[10] > self.config['episode_duration']/3 and obs[4] < self.bucket_trigger_mass:
-      done = True
-    elif obs[10] > self.config['episode_duration']/2 and obs[7] < self.dumpster_trigger_mass:
+    if obs[11] >= self.config['episode_duration']:
       done = True
 
     return obs, reward, done, {}
-
-
+  
   def reset(self):
-    
+    '''
+    print("restart")
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 1)
-    sleep(2)
+    sleep(1)
     self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 0)
 
+    obs = self.mh.get_outputs()
+
+    while round(obs[11]) != 0: 
+      self.mh.set_single_digital_input(self.config['reset_input_block'], self.mh.worker_number, 0)
+      obs = self.mh.get_outputs()
+      sleep(0.1)
+    '''
     return self.mh.get_outputs()
 
   def render(self, mode='', close=False):

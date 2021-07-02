@@ -1,38 +1,27 @@
-15:13:13: DM Manager started
-15:13:15: Manager selects port 4763
-15:13:15: Manager creating model
-15:13:15: Manager waiting for GUI to connect
-15:13:15: Manager got connect from GUI
-15:13:15: DMHandleNewConnection: Got PDU: ID=1002, Type=1002, dsize=0
-15:13:15: GUI going to receive Environment Parameters
-15:13:15: Manager receiving environment:
-15:13:15: FINISHED RECEIVING ENVIRONMENT, xmlname member: C:/Program Files (x86)/Mevea/MeveaModeller/tmp/sample.mvs
-15:13:15: Manager will parse files
-15:13:15: Manager got environment: 1 solvers
-15:13:15: Adding socket to GUI sockets 0
-15:13:15: GUI connected
-15:13:15: GUI ready, creating solvers
-15:13:15: Creating nSolvers = 1 threads from 1 factories
-15:13:15: Creating solver from Standard Factory
-15:13:16: Solver created using Standard Factory
-15:13:16: Select() returns 1: New Connection
-15:13:16: DMHandleNewConnection: Got PDU: ID=0, Type=1001, dsize=0
-15:13:16: Adding socket to Solver Sockets (solverid)
-15:13:16: Solver 0 ready
-15:13:19: GUI -1 wants to start
-15:13:19: Starting all
-15:13:19: Sending start to solver 0
-15:13:19: Got response PDU_ACK from solver 0
-15:13:19: Sending start to GUI, sock[2]!
-15:13:19: Got response PDU_ACK from GUI!
-15:15:05: DMRecvPdu(): Connection in sock 0 closed, so quitting
-15:15:05: DMHandlePacket(): Visualization unreachable, closing
-15:15:05: Current packet: sender=0 type=12121
-15:15:05: Visualization closed during simulation
-15:15:05: DMHandlePacket: No PDU received
-15:15:05: DMRecvPdu(): Connection in sock 0 closed, so quitting
-15:15:05: DMHandlePacket(): Visualization unreachable, closing
-15:15:05: Current packet: sender=0 type=12121
-15:15:05: Visualization connection closed, state -1
-15:15:05: DMHandlePacket: No PDU received
-15:15:05: DMHandlePacket: Connection closed before start, exiting
+22:50:55: DM Manager started
+22:50:57: Manager selects port 4763
+22:50:57: Manager creating model
+22:50:57: Manager waiting for GUI to connect
+22:50:57: Manager got connect from GUI
+22:50:57: DMHandleNewConnection: Got PDU: ID=1002, Type=1002, dsize=0
+22:50:57: GUI going to receive Environment Parameters
+22:50:57: Manager receiving environment:
+22:50:57: FINISHED RECEIVING ENVIRONMENT, xmlname member: C:\Data\m-gym\m_gym\envs\WheelLoader\WheelLoader.mvs
+22:50:57: Manager will parse files
+22:50:57: Manager got environment: 1 solvers
+22:50:57: Adding socket to GUI sockets 0
+22:50:57: GUI connected
+22:50:57: GUI ready, creating solvers
+22:50:57: Creating nSolvers = 1 threads from 1 factories
+22:50:57: Creating solver from Standard Factory
+22:50:57: Solver created using Standard Factory
+22:50:57: Select() returns 1: New Connection
+22:50:57: DMHandleNewConnection: Got PDU: ID=0, Type=1001, dsize=0
+22:50:57: Adding socket to Solver Sockets (solverid)
+22:50:57: Solver 0 ready
+22:50:59: GUI -1 wants to start
+22:50:59: Starting all
+22:50:59: Sending start to solver 0
+22:50:59: Got response PDU_ACK from solver 0
+22:50:59: Sending start to GUI, sock[2]!
+22:50:59: Got response PDU_ACK from GUI!

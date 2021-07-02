@@ -743,6 +743,9 @@
     <Output_Coll_Gr_BFront Name="Output_Coll_Gr_BFront" OutputType="Analog" ChannelBlock="7" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="Component" SourceName="" ComponentType="CollisionSensor" ComponentName="CollisionSensor_BodyFront_Ground" ParameterName="CollisionSensor_BodyFront_Ground nserious" />
     <Output_Time Name="Output_Time" OutputType="Analog" ChannelBlock="10" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="DataSource" SourceName="DataSource1" ComponentType="SimulationProperties" ComponentName="Simulation" ParameterName="Time" />
     <Output_dt Name="Output_dt" OutputType="Analog" ChannelBlock="11" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="Component" SourceName="" ComponentType="SimulationProperties" ComponentName="Simulation" ParameterName="Time Step" />
+    <Output_Bucket_xd Name="Output_Bucket_xd" OutputType="Analog" ChannelBlock="12" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="Component" SourceName="" ComponentType="Body" ComponentName="Bucket" ParameterName="Bucket xd" />
+    <Output_Bucket_yd Name="Output_Bucket_yd" OutputType="Analog" ChannelBlock="13" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="Component" SourceName="" ComponentType="Body" ComponentName="Bucket" ParameterName="Bucket yd" />
+    <Output_Bucket_zd Name="Output_Bucket_zd" OutputType="Analog" ChannelBlock="14" ChannelIndex="0" Scale="1" Offset="0" Invert="No" SourceType="Component" SourceName="" ComponentType="Body" ComponentName="Bucket" ParameterName="Bucket zd" />
   </Outputs>
   <MotionPlatformControl />
   <FMI>

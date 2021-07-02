@@ -1,7 +1,5 @@
-15:13:15: DMClient started, nSolvers=0, solverID=1002
-15:13:15: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
-15:13:15: ID 1002, sending pdu 1002 
-15:13:15: filename: C:/Program Files (x86)/Mevea/MeveaModeller/tmp/sample.mvs, length 57
-15:13:19: Simulation started...
-15:15:05: DMClient destr, nSolvers=0, solverID=1002
-15:15:05: DMClient in destructor
+22:50:57: DMClient started, nSolvers=0, solverID=1002
+22:50:57: Allocating memory for message vectors, m_nkpl=-1, m_nvis=-1, size=1288
+22:50:57: ID 1002, sending pdu 1002 
+22:50:57: filename: C:\Data\m-gym\m_gym\envs\WheelLoader\WheelLoader.mvs, length 52
+22:50:59: Simulation started...
