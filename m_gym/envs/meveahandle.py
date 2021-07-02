@@ -3,6 +3,8 @@ from time import sleep
 import numpy as np
 from shutil import rmtree
 import m_gym.envs.MeveaIO as io
+from os import kill
+from signal import CTRL_BREAK_EVENT
 
 class MeveaHandle:
 
@@ -64,7 +66,7 @@ class MeveaHandle:
 
     def terminate(self):
 
-        self.process.kill()
+        kill(self.process.pid, CTRL_BREAK_EVENT)
         sleep(2)
     
     def delete_folder(self, folder):
