@@ -1,38 +1,38 @@
-15:13:13: DM Manager started
-15:13:15: Manager selects port 4763
-15:13:15: Manager creating model
-15:13:15: Manager waiting for GUI to connect
-15:13:15: Manager got connect from GUI
-15:13:15: DMHandleNewConnection: Got PDU: ID=1002, Type=1002, dsize=0
-15:13:15: GUI going to receive Environment Parameters
-15:13:15: Manager receiving environment:
-15:13:15: FINISHED RECEIVING ENVIRONMENT, xmlname member: C:/Program Files (x86)/Mevea/MeveaModeller/tmp/sample.mvs
-15:13:15: Manager will parse files
-15:13:15: Manager got environment: 1 solvers
-15:13:15: Adding socket to GUI sockets 0
-15:13:15: GUI connected
-15:13:15: GUI ready, creating solvers
-15:13:15: Creating nSolvers = 1 threads from 1 factories
-15:13:15: Creating solver from Standard Factory
-15:13:16: Solver created using Standard Factory
-15:13:16: Select() returns 1: New Connection
-15:13:16: DMHandleNewConnection: Got PDU: ID=0, Type=1001, dsize=0
-15:13:16: Adding socket to Solver Sockets (solverid)
-15:13:16: Solver 0 ready
-15:13:19: GUI -1 wants to start
-15:13:19: Starting all
-15:13:19: Sending start to solver 0
-15:13:19: Got response PDU_ACK from solver 0
-15:13:19: Sending start to GUI, sock[2]!
-15:13:19: Got response PDU_ACK from GUI!
-15:15:05: DMRecvPdu(): Connection in sock 0 closed, so quitting
-15:15:05: DMHandlePacket(): Visualization unreachable, closing
-15:15:05: Current packet: sender=0 type=12121
-15:15:05: Visualization closed during simulation
-15:15:05: DMHandlePacket: No PDU received
-15:15:05: DMRecvPdu(): Connection in sock 0 closed, so quitting
-15:15:05: DMHandlePacket(): Visualization unreachable, closing
-15:15:05: Current packet: sender=0 type=12121
-15:15:05: Visualization connection closed, state -1
-15:15:05: DMHandlePacket: No PDU received
-15:15:05: DMHandlePacket: Connection closed before start, exiting
+18:40:05: DM Manager started
+18:40:07: Manager selects port 4763
+18:40:07: Manager creating model
+18:40:07: Manager waiting for GUI to connect
+18:40:07: Manager got connect from GUI
+18:40:07: DMHandleNewConnection: Got PDU: ID=1002, Type=1002, dsize=0
+18:40:07: GUI going to receive Environment Parameters
+18:40:07: Manager receiving environment:
+18:40:07: FINISHED RECEIVING ENVIRONMENT, xmlname member: C:/Program Files (x86)/Mevea/MeveaModeller/tmp/sample.mvs
+18:40:07: Manager will parse files
+18:40:08: Manager got environment: 1 solvers
+18:40:08: Adding socket to GUI sockets 0
+18:40:08: GUI connected
+18:40:08: GUI ready, creating solvers
+18:40:08: Creating nSolvers = 1 threads from 1 factories
+18:40:08: Creating solver from Standard Factory
+18:40:08: Solver created using Standard Factory
+18:40:08: Select() returns 1: New Connection
+18:40:08: DMHandleNewConnection: Got PDU: ID=0, Type=1001, dsize=0
+18:40:08: Adding socket to Solver Sockets (solverid)
+18:40:08: Solver 0 ready
+18:40:11: GUI -1 wants to start
+18:40:11: Starting all
+18:40:11: Sending start to solver 0
+18:40:11: Got response PDU_ACK from solver 0
+18:40:11: Sending start to GUI, sock[2]!
+18:40:11: Got response PDU_ACK from GUI!
+18:42:19: DMRecvPdu(): Connection in sock 0 closed, so quitting
+18:42:19: DMHandlePacket(): Visualization unreachable, closing
+18:42:19: Current packet: sender=0 type=12121
+18:42:19: Visualization closed during simulation
+18:42:19: DMHandlePacket: No PDU received
+18:42:19: DMRecvPdu(): Connection in sock 0 closed, so quitting
+18:42:19: DMHandlePacket(): Visualization unreachable, closing
+18:42:19: Current packet: sender=0 type=12121
+18:42:19: Visualization connection closed, state -1
+18:42:19: DMHandlePacket: No PDU received
+18:42:19: DMHandlePacket: Connection closed before start, exiting

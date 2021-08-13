@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MeVEA_Materials_Library>
+  <Visualization_Materials />
+  <Dynamic_Materials>
+    <Standard_Steel K="3e5" C="0" E="0.05">
+      <Friction s0="1000" s1="50" v0="0.1" c="10" myys="0.3" myyd="0.1" />
+    </Standard_Steel>
+    <Pallet_Material K="4e6" C="0" E="0.2">
+      <Friction s0="10" s1="0.05" v0="0.1" c="1" myys="0.6" myyd="0.3" />
+    </Pallet_Material>
+    <Standard_HardSteel K="3e6" C="0" E="0.05">
+      <Friction s0="1000" s1="50" v0="0.1" c="100" myys="0.1" myyd="0.05" />
+    </Standard_HardSteel>
+    <Standard_HardSteelNoF K="3e6" C="0" E="0.05">
+      <Friction s0="0" s1="0" v0="0" c="0" myys="0" myyd="0" />
+    </Standard_HardSteelNoF>
+    <Targets_Collision K="1e6" C="0" E="0.04">
+      <Friction s0="4000" s1="500" v0="0.01" c="0.1" myys="0.3" myyd="0.1" />
+    </Targets_Collision>
+    <Tree_Collision K="1.3e6" C="0" E="0.1">
+      <Friction s0="4000" s1="500" v0="0.01" c="0.1" myys="0.3" myyd="0.1" />
+    </Tree_Collision>
+    <sakset K="1e6" C="0" E="0.5">
+      <Friction s0="1000" s1="5" v0="0.1" c="0" myys="0" myyd="0" />
+    </sakset>
+    <Front_Knives K="2e6" C="0" E="0.6">
+      <Friction s0="1000" s1="5" v0="0.1" c="0" myys="0" myyd="0" />
+    </Front_Knives>
+    <Rear_Knives K="1e6" C="0" E="0.4">
+      <Friction s0="1000" s1="5" v0="0.1" c="0" myys="0" myyd="0" />
+    </Rear_Knives>
+    <Rollers K="2e6" C="0" E="0.1">
+      <Friction s0="1000" s1="5" v0="0.05" c="1" myys="0.1" myyd="0.05" />
+    </Rollers>
+    <HarvesterHead K="2e6" C="0" E="0.5">
+      <Friction s0="1000" s1="5" v0="0.1" c="0" myys="0" myyd="0" />
+    </HarvesterHead>
+    <Reserve K="1e6" C="0" E="0.3">
+      <Friction s0="1000" s1="5" v0="0.1" c="0" myys="0" myyd="0" />
+    </Reserve>
+    <Log K="2e6" C="0" E="0.3">
+      <Friction s0="1000" s1="5" v0="0.05" c="0" myys="0" myyd="0" />
+    </Log>
+    <Bucket_Material K="4e6" C="0" E="0.2">
+      <Friction s0="10" s1="0.05" v0="0.1" c="1" myys="0.6" myyd="0.4" />
+    </Bucket_Material>
+    <Ground_LowFriction K="3e6" C="0" E="0.05">
+      <Friction s0="2000" s1="200" v0="0.1" c="10" myys="0.5" myyd="0.3" />
+    </Ground_LowFriction>
+    <Foam_Material K="4e5" C="0" E="0.02">
+      <Friction s0="100" s1="0.5" v0="0.1" c="10" myys="0.6" myyd="0.3" />
+    </Foam_Material>
+    <Support_Feet_LoaderCrane K="6e6" C="0" E="0.05">
+      <Friction s0="1000" s1="50" v0="0.1" c="10" myys="0.3" myyd="0.1" />
+    </Support_Feet_LoaderCrane>
+    <Log_soft K="1e5" C="0" E="0.03">
+      <Friction s0="100" s1="5" v0="0.05" c="0" myys="0" myyd="0" />
+    </Log_soft>
+    <Ground_soft K="1e5" C="0" E="0.05">
+      <Friction s0="4000" s1="500" v0="0.1" c="100" myys="0.7" myyd="0.5" />
+    </Ground_soft>
+    <Bucket_SoftTeeth K="1e5" C="0" E="0.05">
+      <Friction s0="100" s1="5" v0="0.1" c="1" myys="0.7" myyd="0.5" />
+    </Bucket_SoftTeeth>
+    <TargetNoCollision K="0" C="0" E="0">
+      <Friction s0="0" s1="0" v0="0" c="0" myys="0" myyd="0" />
+    </TargetNoCollision>
+    <Standard_GroundNF K="3e6" C="0" E="0.05">
+      <Friction s0="0" s1="0" v0="0" c="0" myys="0" myyd="0" />
+    </Standard_GroundNF>
+    <Ground_0 K="3e6" C="0" E="0.05">
+      <Friction s0="4000" s1="500" v0="0.1" c="100" myys="0.7" myyd="0.5" />
+    </Ground_0>
+  </Dynamic_Materials>
+</MeVEA_Materials_Library>

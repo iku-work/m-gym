@@ -726,7 +726,7 @@
     <Input_Reverse name="Input_Reverse" isActive="Yes" InType="Digital" PrimType="GearBox" JoyNro="5" JoyCh="0" InputSource="" positiveOnly="No" Scale="0" B="0" DeadZone="0" delay="0" hold="0" scriptName="" PrimSub="3" PrimName="GearBox" />
     <Motor_Input name="Motor_Input" isActive="Yes" InType="Analog" PrimType="Motor" JoyNro="5" JoyCh="0" InputSource="" positiveOnly="No" Scale="-80" B="150" DeadZone="0" delay="0" hold="0" scriptName="" PrimSub="0" PrimName="Volvo_D6E_LBE3" />
     <Clutch_input name="Clutch_input" isActive="Yes" InType="Analog" PrimType="Clutch" JoyNro="2" JoyCh="0" InputSource="" positiveOnly="No" Scale="1000" B="-1000" DeadZone="0.25" delay="0" hold="0" scriptName="" PrimSub="0" PrimName="Clutch" />
-    <Input_Reset name="Input_Reset" isActive="Yes" InType="Digital" PrimType="Spot" JoyNro="5" JoyCh="0" InputSource="" positiveOnly="No" Scale="1" B="0" DeadZone="0.25" delay="0" hold="0" scriptName="" PrimSub="1" PrimName="Spot1" />
+    <Input_Reset name="Input_Reset" isActive="Yes" InType="Digital" PrimType="Spot" JoyNro="6" JoyCh="0" InputSource="" positiveOnly="No" Scale="1" B="0" DeadZone="0.25" delay="0" hold="0" scriptName="" PrimSub="1" PrimName="Spot1" />
     <Input_Ready name="Input_Ready" isActive="Yes" InType="Digital" PrimType="Input" JoyNro="1" JoyCh="0" InputSource="" positiveOnly="No" Scale="1" B="0" DeadZone="0.25" delay="0" hold="0" scriptName="" PrimSub="2" PrimName="Input_Ready" />
   </Inputs>
   <Outputs>
@@ -864,7 +864,7 @@
       <AccelerationSensor_Bucket SensorType="0" Body="Bucket" CS="Bucket.CS1" />
     </AccelerationSensors>
     <DistanceSensors>
-      <DistanceSensor_Bucket_Loading Body1="Bucket" CS1="Bucket.CS1" Body2="Dummy_Loading_Area" CS2="Dummy_Loading_Area.CS1" Body3="Ground" CS3="Ground.CS1" />
+      <DistanceSensor_Bucket_Loading Body1="Ground" CS1="Ground.CS1" Body2="Bucket" CS2="Bucket.CS1" Body3="Dummy_Loading_Area" CS3="Dummy_Loading_Area.CS1" />
       <DistanceSensor_Bucket_Dumpster Body1="Bucket" CS1="Bucket.CS1" Body2="Dummy_Dumpster" CS2="Dummy_Dumpster.CS1" Body3="Ground" CS3="Ground.CS1" />
     </DistanceSensors>
     <GyroscopicSensors>

@@ -8,23 +8,29 @@ from time import sleep
 sim = gym.make('m_gym:wheelloader-dense-v0')
 env = DummyVecEnv([lambda: sim])
 
-model = PPO2(MlpPolicy, env, verbose=1)
-model.learn(total_timesteps=200000)
-
 # Wait till Mevea Solver opens
 sleep(10)
-'''
+
+model = PPO2(MlpPolicy, env, verbose=1)
+#model.learn(total_timesteps=200000)
+
+
+
 # Reset an environment
 obs = env.reset()
 
-for i in range(200000):
+for i in range(2000000):
   
   # Skip frame
-  sleep(1)
+  #sleep(1)
   
   action, _states = model.predict(obs)
+  
   obs, rewards, done, info = env.step(action)
+
+  #if (i%5 == 0):
+  print("steps: ", i, "Reward: ", rewards, "Obs", obs[0][2])
 
 env.close()
 
-'''
+
