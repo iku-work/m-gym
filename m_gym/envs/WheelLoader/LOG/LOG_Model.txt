@@ -998,6 +998,9 @@ Output_Gr_Coll_BRear, Analog, 6, 0, 1, 0, Component, , CollisionSensor, Collisio
 Output_Coll_Gr_BFront, Analog, 7, 0, 1, 0, Component, , CollisionSensor, CollisionSensor_BodyFront_Ground, CollisionSensor_BodyFront_Ground nserious
 Output_Time, Analog, 10, 0, 1, 0, DataSource, DataSource1, SimulationProperties, Simulation, Time
 Output_dt, Analog, 11, 0, 1000, 0, Component, , SimulationProperties, Simulation, Time Step
+Output_Bucket_xd, Analog, 12, 0, 1, 0, Component, , Body, Bucket, Bucket xd
+Output_Bucket_yd, Analog, 13, 0, 1, 0, Component, , Body, Bucket, Bucket yd
+Output_Bucket_zd, Analog, 14, 0, 1, 0, Component, , Body, Bucket, Bucket zd
 
 
 

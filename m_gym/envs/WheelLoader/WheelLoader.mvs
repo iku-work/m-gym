@@ -3,5 +3,5 @@
   <Environment simulationName="Tutorial 3" useParticles="Yes" particlesInThread="Yes" particleCellsInThread="Yes" collisionGroupDefinitionsFile="" nCollisionThreads="4" />
   <Models ModelFile="WheelLoader.xml" solverID="1" useArchive="No" MPKFile="" hydraulicsSchematicFile="" />
   <World WorldFile="WheelLoader_world.xml" />
-  <ModelCreationInfo saveDate="2021-08-13" saveTime="18:39:55" modelVersion="" softwareVersion="2.4.5" modellerVersion="1161" solverVersion="7.70.3601" />
+  <ModelCreationInfo saveDate="2021-06-26" saveTime="14:54:04" modelVersion="" softwareVersion="2.4.5" modellerVersion="1161" solverVersion="7.70.3601" />
 </MeVEASimulation>

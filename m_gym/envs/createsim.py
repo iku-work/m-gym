@@ -1,3 +1,4 @@
+from time import sleep
 import xml.etree.ElementTree as ET
 from os import getcwd, path, makedirs, listdir
 from shutil import copytree, copy
@@ -6,10 +7,15 @@ from pathlib import Path
 from uuid import uuid1
 import m_gym
 import random
+import m_gym.envs.MeveaIO as io
+from ray import worker
+from ray.tune.sample import randint
 
 class CreateSimulation():
 
   def __init__(self, config):
+
+    sleep(random.randint(0,2))
 
     self.config = config
     self.model_name = config['model_name']
@@ -57,8 +63,6 @@ class CreateSimulation():
 
     self.new_folder = '{}\\{}'.format(self.workers_dir,self.current_id) 
 
-    print(self.new_folder)
-
     if not path.exists(self.workers_dir):
       makedirs(self.workers_dir)
 
@@ -73,9 +77,9 @@ class CreateSimulation():
             print('Directory not copied. Error: %s' % e)
 
 
-    self.worker_number = random.randint(0,15)
+    #self.worker_number = random.randint(0,15)
+    self.worker_number = self.allocateIO()
     self.new_xml_file_path = self.new_folder + '\\{}.xml'.format(self.model_name)
-    print(self.new_xml_file_path)
     self.new_xml_file = ET.parse(self.new_xml_file_path)
     self.analog_inputs_blocks, self.digital_inputs_blocks = self.set_inputs(self.new_xml_file_path, self.new_xml_file, self.inputs, self.worker_number)
 
@@ -152,8 +156,6 @@ class CreateSimulation():
     root = xml_doc.getroot()
     
     inputs_element = root.find('Inputs')
-    
-    print(inputs_element.text)
 
     analog_inputs_names = inputs_list[0]
     analog_inputs_len = len(analog_inputs_names)
@@ -173,8 +175,6 @@ class CreateSimulation():
       digital_input = inputs_element.find(digital_inputs_names[digital_input_index])
       digital_input.set("JoyCh", str(worker_number))
 
-
-    print("Service inputs: ", service_inputs)
     for service_input_name in service_inputs:
       service_input = inputs_element.find(service_input_name)
       service_input.set("JoyCh", str(worker_number))
@@ -230,6 +230,45 @@ class CreateSimulation():
           return False
       else:
           return True
+
+  def allocateIO(self):
+    
+    wrk_number = 0
+    rand_num = random.randint(0,2000)
+    found = False 
+
+    while not found:
+      
+      # check if any of first 10 blocks are occupied by different simulation
+      outputs_values = []
+      for block in range(10):
+        outputs_values.append(io.get_analog_output(block,wrk_number)) 
+
+      if (sum(outputs_values)/len(outputs_values) != 0):
+        wrk_number += 1
+
+      # set output in I/O pool and check if it's not occupied meanwhile by other Mevea instance
+      output_value = io.get_analog_output(0,wrk_number)
+
+      if (output_value == 0):
+        code = io.set_analog_output(0,wrk_number,rand_num)
+        sleep(1)
+        output_value = io.get_analog_output(0,wrk_number)
+        print(code, wrk_number, rand_num, output_value)
+
+      if (output_value != rand_num):
+        wrk_number += 1
+        sleep(1)
+      else:
+        found = True
+    
+    print("Worker number: ", wrk_number)
+
+    return wrk_number
+
+
+
+
 
 class BadType(Exception):  
   pass

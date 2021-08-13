@@ -5,7 +5,7 @@ from stable_baselines import PPO2
 from time import sleep
 
 # Run WheelLoader environment
-sim = gym.make('m_gym:wheelloader-dense-v0')
+sim = gym.make('m_gym:excavator-digging-sparse-v0')
 env = DummyVecEnv([lambda: sim])
 
 # Wait till Mevea Solver opens
@@ -27,6 +27,7 @@ for i in range(2000000):
   action, _states = model.predict(obs)
   
   obs, rewards, done, info = env.step(action)
+  print(obs)
 
   #if (i%5 == 0):
   print("steps: ", i, "Reward: ", rewards, "Obs", obs[0][2])
